@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "pybind11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cholesky_module"
+version = "0.1.0"
+description = "Cholesky decomposition of symmetric positive definite matrices"
+requires-python = ">=3.8"
