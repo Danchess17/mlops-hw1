@@ -1,8 +1,4 @@
 import numpy as np
-import sys
-import os
-
-sys.path.append(os.path.join(os.path.dirname(__file__), 'build'))
 
 from cholesky_module import cholesky_decomposition
 print("Module imported successfully!")

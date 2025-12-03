@@ -12,3 +12,7 @@ pybind11_add_module(cholesky_module
 )
 
 target_compile_options(cholesky_module PRIVATE -O3 -DNDEBUG)
+
+install(TARGETS cholesky_module
+    LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}
+    COMPONENT python)

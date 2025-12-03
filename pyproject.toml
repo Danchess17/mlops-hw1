@@ -1,9 +1,15 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel", "pybind11"]
-build-backend = "setuptools.build_meta"
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
 
 [project]
 name = "cholesky_module"
 version = "0.1.0"
 description = "Cholesky decomposition of symmetric positive definite matrices"
 requires-python = ">=3.8"
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+sdist.include = ["src/*", "CMakeLists.txt", "pyproject.toml"]
+wheel.exclude = ["tests"]
+
